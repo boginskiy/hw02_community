@@ -25,7 +25,7 @@ class Post(models.Model):
         related_name='posts_author'
     )
     group = models.ForeignKey(
-        'Group',
+        Group,
         blank=True,
         null=True,
         on_delete=models.SET_NULL,

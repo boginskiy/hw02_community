@@ -5,7 +5,7 @@ SELECTION_TEN = 10
 
 
 def index(request):
-    posts = Post.objects.select_related('author')[:SELECTION_TEN]
+    posts = Post.objects.select_related('group')[:SELECTION_TEN]
     context = {'posts': posts, }
     return render(request, 'posts/index.html', context)
 
